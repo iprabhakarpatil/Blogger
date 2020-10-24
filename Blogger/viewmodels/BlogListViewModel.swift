@@ -10,7 +10,9 @@ import Foundation
 class BlogListViewModel {
     
     var blogList: [BlogViewModel] = [BlogViewModel]()
-    private var page = 0
+    
+    var hasMoreData: Bool = false
+    private var page = 1
     private var completion: ()-> Void = {  }
     
     init(completion: @escaping () -> Void) {
@@ -18,9 +20,11 @@ class BlogListViewModel {
         fetchBlogs()
     }
     
-    private func fetchBlogs() {
+    func fetchBlogs() {
         
-        page += 1
+        if hasMoreData {
+            page = (blogList.count/10) + 1
+        }
         
         NetworkService.shared.fetchBlogs(for: page) {[weak self] (result: Result<[BlogListModel], NetworkError>) in
             switch result {
@@ -29,6 +33,12 @@ class BlogListViewModel {
                 guard let self = self else {
                     assert(false, "Failed to retain self")
                     return
+                }
+                
+                if blogs.count >= 10 {
+                    self.hasMoreData = true
+                } else {
+                    self.hasMoreData = false
                 }
                 
                 if self.blogList.isEmpty {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,15 @@
 		B03E8B4925441DE700209B23 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B4625441DE700209B23 /* BlogTableViewCell.swift */; };
 		B03E8B4A25441DE700209B23 /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B03E8B4725441DE700209B23 /* BlogTableViewCell.xib */; };
 		B03E8B4B25441DE700209B23 /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B03E8B4725441DE700209B23 /* BlogTableViewCell.xib */; };
+		B03E8B50254427BE00209B23 /* AuthorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B4F254427BE00209B23 /* AuthorViewModel.swift */; };
+		B03E8B51254427BE00209B23 /* AuthorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B4F254427BE00209B23 /* AuthorViewModel.swift */; };
+		B03E8B56254427D400209B23 /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B55254427D400209B23 /* MediaViewModel.swift */; };
+		B03E8B57254427D400209B23 /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B55254427D400209B23 /* MediaViewModel.swift */; };
+		B03E8B67254437B600209B23 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B03E8B66254437B600209B23 /* Kingfisher */; };
+		B03E8B6C25443ECA00209B23 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B6B25443ECA00209B23 /* UIView+.swift */; };
+		B03E8B79254440A500209B23 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B78254440A500209B23 /* Int+.swift */; };
+		B03E8B7E2544436C00209B23 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B7D2544436C00209B23 /* Date+.swift */; };
+		B03E8B83254444A100209B23 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B82254444A100209B23 /* DateFormatter.swift */; };
 		B0A6DEF0254403AE000C6C04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEEF254403AE000C6C04 /* AppDelegate.swift */; };
 		B0A6DEF2254403AE000C6C04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEF1254403AE000C6C04 /* SceneDelegate.swift */; };
 		B0A6DEF4254403AE000C6C04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEF3254403AE000C6C04 /* ViewController.swift */; };
@@ -59,6 +68,12 @@
 		B02879202544155F00D15638 /* BlogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewModel.swift; sourceTree = "<group>"; };
 		B03E8B4625441DE700209B23 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
 		B03E8B4725441DE700209B23 /* BlogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlogTableViewCell.xib; sourceTree = "<group>"; };
+		B03E8B4F254427BE00209B23 /* AuthorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorViewModel.swift; sourceTree = "<group>"; };
+		B03E8B55254427D400209B23 /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
+		B03E8B6B25443ECA00209B23 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		B03E8B78254440A500209B23 /* Int+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+.swift"; sourceTree = "<group>"; };
+		B03E8B7D2544436C00209B23 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		B03E8B82254444A100209B23 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		B0A6DEEC254403AE000C6C04 /* Blogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A6DEEF254403AE000C6C04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0A6DEF1254403AE000C6C04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03E8B67254437B600209B23 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +204,8 @@
 			children = (
 				B028791A254414BC00D15638 /* BlogListViewModel.swift */,
 				B02879202544155F00D15638 /* BlogViewModel.swift */,
+				B03E8B4F254427BE00209B23 /* AuthorViewModel.swift */,
+				B03E8B55254427D400209B23 /* MediaViewModel.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -214,6 +232,7 @@
 			children = (
 				B0A6DEEF254403AE000C6C04 /* AppDelegate.swift */,
 				B0A6DEF1254403AE000C6C04 /* SceneDelegate.swift */,
+				B03E8B82254444A100209B23 /* DateFormatter.swift */,
 			);
 			path = utility;
 			sourceTree = "<group>";
@@ -222,6 +241,9 @@
 			isa = PBXGroup;
 			children = (
 				B028790625440C4100D15638 /* URLSession+.swift */,
+				B03E8B6B25443ECA00209B23 /* UIView+.swift */,
+				B03E8B78254440A500209B23 /* Int+.swift */,
+				B03E8B7D2544436C00209B23 /* Date+.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -242,6 +264,9 @@
 			dependencies = (
 			);
 			name = Blogger;
+			packageProductDependencies = (
+				B03E8B66254437B600209B23 /* Kingfisher */,
+			);
 			productName = Blogger;
 			productReference = B0A6DEEC254403AE000C6C04 /* Blogger.app */;
 			productType = "com.apple.product-type.application";
@@ -313,6 +338,9 @@
 				Base,
 			);
 			mainGroup = B0A6DEE3254403AE000C6C04;
+			packageReferences = (
+				B03E8B65254437B600209B23 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = B0A6DEED254403AE000C6C04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,9 +386,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03E8B56254427D400209B23 /* MediaViewModel.swift in Sources */,
 				B0A6DEF4254403AE000C6C04 /* ViewController.swift in Sources */,
+				B03E8B79254440A500209B23 /* Int+.swift in Sources */,
+				B03E8B6C25443ECA00209B23 /* UIView+.swift in Sources */,
 				B0A6DEF0254403AE000C6C04 /* AppDelegate.swift in Sources */,
 				B03E8B4825441DE700209B23 /* BlogTableViewCell.swift in Sources */,
+				B03E8B50254427BE00209B23 /* AuthorViewModel.swift in Sources */,
+				B03E8B83254444A100209B23 /* DateFormatter.swift in Sources */,
 				B02879212544155F00D15638 /* BlogViewModel.swift in Sources */,
 				B028790725440C4100D15638 /* URLSession+.swift in Sources */,
 				B028790C25440CD800D15638 /* BlogListModel.swift in Sources */,
@@ -369,6 +402,7 @@
 				B028791225440D4400D15638 /* NetworkErrors.swift in Sources */,
 				B0A6DEFA254403AE000C6C04 /* Blogger.xcdatamodeld in Sources */,
 				B0A6DEF2254403AE000C6C04 /* SceneDelegate.swift in Sources */,
+				B03E8B7E2544436C00209B23 /* Date+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,12 +411,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B02878F9254408A200D15638 /* NetworkManager.swift in Sources */,
+				B03E8B57254427D400209B23 /* MediaViewModel.swift in Sources */,
 				B028791325440D4400D15638 /* NetworkErrors.swift in Sources */,
 				B02879222544155F00D15638 /* BlogViewModel.swift in Sources */,
 				B03E8B4925441DE700209B23 /* BlogTableViewCell.swift in Sources */,
 				B028791C254414BC00D15638 /* BlogListViewModel.swift in Sources */,
 				B028790D25440CD800D15638 /* BlogListModel.swift in Sources */,
 				B0A6DF0A254403B1000C6C04 /* BloggerTests.swift in Sources */,
+				B03E8B51254427BE00209B23 /* AuthorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +737,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B03E8B65254437B600209B23 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B03E8B66254437B600209B23 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B03E8B65254437B600209B23 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B0A6DEF8254403AE000C6C04 /* Blogger.xcdatamodeld */ = {
