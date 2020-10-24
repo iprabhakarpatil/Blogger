@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02878F8254408A200D15638 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02878F7254408A200D15638 /* NetworkManager.swift */; };
+		B02878F9254408A200D15638 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02878F7254408A200D15638 /* NetworkManager.swift */; };
+		B028790725440C4100D15638 /* URLSession+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028790625440C4100D15638 /* URLSession+.swift */; };
+		B028790C25440CD800D15638 /* BlogListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028790B25440CD800D15638 /* BlogListModel.swift */; };
+		B028790D25440CD800D15638 /* BlogListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028790B25440CD800D15638 /* BlogListModel.swift */; };
+		B028791225440D4400D15638 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028791125440D4400D15638 /* NetworkErrors.swift */; };
+		B028791325440D4400D15638 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028791125440D4400D15638 /* NetworkErrors.swift */; };
 		B0A6DEF0254403AE000C6C04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEEF254403AE000C6C04 /* AppDelegate.swift */; };
 		B0A6DEF2254403AE000C6C04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEF1254403AE000C6C04 /* SceneDelegate.swift */; };
 		B0A6DEF4254403AE000C6C04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEF3254403AE000C6C04 /* ViewController.swift */; };
@@ -36,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B02878F7254408A200D15638 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B028790625440C4100D15638 /* URLSession+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+.swift"; sourceTree = "<group>"; };
+		B028790B25440CD800D15638 /* BlogListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListModel.swift; sourceTree = "<group>"; };
+		B028791125440D4400D15638 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		B0A6DEEC254403AE000C6C04 /* Blogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A6DEEF254403AE000C6C04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0A6DEF1254403AE000C6C04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +179,7 @@
 		B0A6DF2D25440664000C6C04 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				B028790B25440CD800D15638 /* BlogListModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -175,6 +187,8 @@
 		B0A6DF2E2544066A000C6C04 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				B02878F7254408A200D15638 /* NetworkManager.swift */,
+				B028791125440D4400D15638 /* NetworkErrors.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -191,6 +205,7 @@
 		B0A6DF3025440684000C6C04 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B028790625440C4100D15638 /* URLSession+.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -327,6 +342,10 @@
 			files = (
 				B0A6DEF4254403AE000C6C04 /* ViewController.swift in Sources */,
 				B0A6DEF0254403AE000C6C04 /* AppDelegate.swift in Sources */,
+				B028790725440C4100D15638 /* URLSession+.swift in Sources */,
+				B028790C25440CD800D15638 /* BlogListModel.swift in Sources */,
+				B02878F8254408A200D15638 /* NetworkManager.swift in Sources */,
+				B028791225440D4400D15638 /* NetworkErrors.swift in Sources */,
 				B0A6DEFA254403AE000C6C04 /* Blogger.xcdatamodeld in Sources */,
 				B0A6DEF2254403AE000C6C04 /* SceneDelegate.swift in Sources */,
 			);
@@ -336,6 +355,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B02878F9254408A200D15638 /* NetworkManager.swift in Sources */,
+				B028791325440D4400D15638 /* NetworkErrors.swift in Sources */,
+				B028790D25440CD800D15638 /* BlogListModel.swift in Sources */,
 				B0A6DF0A254403B1000C6C04 /* BloggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
