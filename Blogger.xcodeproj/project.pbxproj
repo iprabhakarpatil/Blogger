@@ -14,6 +14,14 @@
 		B028790D25440CD800D15638 /* BlogListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028790B25440CD800D15638 /* BlogListModel.swift */; };
 		B028791225440D4400D15638 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028791125440D4400D15638 /* NetworkErrors.swift */; };
 		B028791325440D4400D15638 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028791125440D4400D15638 /* NetworkErrors.swift */; };
+		B028791B254414BC00D15638 /* BlogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028791A254414BC00D15638 /* BlogListViewModel.swift */; };
+		B028791C254414BC00D15638 /* BlogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B028791A254414BC00D15638 /* BlogListViewModel.swift */; };
+		B02879212544155F00D15638 /* BlogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02879202544155F00D15638 /* BlogViewModel.swift */; };
+		B02879222544155F00D15638 /* BlogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02879202544155F00D15638 /* BlogViewModel.swift */; };
+		B03E8B4825441DE700209B23 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B4625441DE700209B23 /* BlogTableViewCell.swift */; };
+		B03E8B4925441DE700209B23 /* BlogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B4625441DE700209B23 /* BlogTableViewCell.swift */; };
+		B03E8B4A25441DE700209B23 /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B03E8B4725441DE700209B23 /* BlogTableViewCell.xib */; };
+		B03E8B4B25441DE700209B23 /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B03E8B4725441DE700209B23 /* BlogTableViewCell.xib */; };
 		B0A6DEF0254403AE000C6C04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEEF254403AE000C6C04 /* AppDelegate.swift */; };
 		B0A6DEF2254403AE000C6C04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEF1254403AE000C6C04 /* SceneDelegate.swift */; };
 		B0A6DEF4254403AE000C6C04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEF3254403AE000C6C04 /* ViewController.swift */; };
@@ -47,6 +55,10 @@
 		B028790625440C4100D15638 /* URLSession+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+.swift"; sourceTree = "<group>"; };
 		B028790B25440CD800D15638 /* BlogListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListModel.swift; sourceTree = "<group>"; };
 		B028791125440D4400D15638 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		B028791A254414BC00D15638 /* BlogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListViewModel.swift; sourceTree = "<group>"; };
+		B02879202544155F00D15638 /* BlogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogViewModel.swift; sourceTree = "<group>"; };
+		B03E8B4625441DE700209B23 /* BlogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogTableViewCell.swift; sourceTree = "<group>"; };
+		B03E8B4725441DE700209B23 /* BlogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlogTableViewCell.xib; sourceTree = "<group>"; };
 		B0A6DEEC254403AE000C6C04 /* Blogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A6DEEF254403AE000C6C04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0A6DEF1254403AE000C6C04 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +104,8 @@
 		B02878F22544070B00D15638 /* tableviewcells */ = {
 			isa = PBXGroup;
 			children = (
+				B03E8B4625441DE700209B23 /* BlogTableViewCell.swift */,
+				B03E8B4725441DE700209B23 /* BlogTableViewCell.xib */,
 			);
 			path = tableviewcells;
 			sourceTree = "<group>";
@@ -172,6 +186,8 @@
 		B0A6DF2C2544065D000C6C04 /* viewmodels */ = {
 			isa = PBXGroup;
 			children = (
+				B028791A254414BC00D15638 /* BlogListViewModel.swift */,
+				B02879202544155F00D15638 /* BlogViewModel.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -314,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A6DEFF254403B1000C6C04 /* LaunchScreen.storyboard in Resources */,
+				B03E8B4A25441DE700209B23 /* BlogTableViewCell.xib in Resources */,
 				B0A6DEFC254403B1000C6C04 /* Assets.xcassets in Resources */,
 				B0A6DEF7254403AE000C6C04 /* Main.storyboard in Resources */,
 			);
@@ -323,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03E8B4B25441DE700209B23 /* BlogTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,8 +360,11 @@
 			files = (
 				B0A6DEF4254403AE000C6C04 /* ViewController.swift in Sources */,
 				B0A6DEF0254403AE000C6C04 /* AppDelegate.swift in Sources */,
+				B03E8B4825441DE700209B23 /* BlogTableViewCell.swift in Sources */,
+				B02879212544155F00D15638 /* BlogViewModel.swift in Sources */,
 				B028790725440C4100D15638 /* URLSession+.swift in Sources */,
 				B028790C25440CD800D15638 /* BlogListModel.swift in Sources */,
+				B028791B254414BC00D15638 /* BlogListViewModel.swift in Sources */,
 				B02878F8254408A200D15638 /* NetworkManager.swift in Sources */,
 				B028791225440D4400D15638 /* NetworkErrors.swift in Sources */,
 				B0A6DEFA254403AE000C6C04 /* Blogger.xcdatamodeld in Sources */,
@@ -357,6 +378,9 @@
 			files = (
 				B02878F9254408A200D15638 /* NetworkManager.swift in Sources */,
 				B028791325440D4400D15638 /* NetworkErrors.swift in Sources */,
+				B02879222544155F00D15638 /* BlogViewModel.swift in Sources */,
+				B03E8B4925441DE700209B23 /* BlogTableViewCell.swift in Sources */,
+				B028791C254414BC00D15638 /* BlogListViewModel.swift in Sources */,
 				B028790D25440CD800D15638 /* BlogListModel.swift in Sources */,
 				B0A6DF0A254403B1000C6C04 /* BloggerTests.swift in Sources */,
 			);

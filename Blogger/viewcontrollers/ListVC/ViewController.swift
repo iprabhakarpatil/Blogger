@@ -11,16 +11,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private var blogListViewModel: BlogListViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkService.shared.fetchBlogs(for: 1) { (result: Result<[BlogListModel], NetworkError>) in
-            switch result {
-            case .success(let response):
-                print("Response: \(response)")
-            case .failure(let error):
-                print("Error:\(error)")
+        blogListViewModel = BlogListViewModel(completion: {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
-        }
+        })
+    
     }
     
 }
