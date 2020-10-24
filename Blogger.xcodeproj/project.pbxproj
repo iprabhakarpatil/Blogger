@@ -26,11 +26,11 @@
 		B03E8B51254427BE00209B23 /* AuthorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B4F254427BE00209B23 /* AuthorViewModel.swift */; };
 		B03E8B56254427D400209B23 /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B55254427D400209B23 /* MediaViewModel.swift */; };
 		B03E8B57254427D400209B23 /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B55254427D400209B23 /* MediaViewModel.swift */; };
-		B03E8B67254437B600209B23 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B03E8B66254437B600209B23 /* Kingfisher */; };
 		B03E8B6C25443ECA00209B23 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B6B25443ECA00209B23 /* UIView+.swift */; };
 		B03E8B79254440A500209B23 /* Int+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B78254440A500209B23 /* Int+.swift */; };
 		B03E8B7E2544436C00209B23 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B7D2544436C00209B23 /* Date+.swift */; };
 		B03E8B83254444A100209B23 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03E8B82254444A100209B23 /* DateFormatter.swift */; };
+		B03E8B892544572400209B23 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B03E8B882544572400209B23 /* SDWebImage */; };
 		B0A6DEF0254403AE000C6C04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEEF254403AE000C6C04 /* AppDelegate.swift */; };
 		B0A6DEF2254403AE000C6C04 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEF1254403AE000C6C04 /* SceneDelegate.swift */; };
 		B0A6DEF4254403AE000C6C04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A6DEF3254403AE000C6C04 /* ViewController.swift */; };
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B03E8B67254437B600209B23 /* Kingfisher in Frameworks */,
+				B03E8B892544572400209B23 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +265,7 @@
 			);
 			name = Blogger;
 			packageProductDependencies = (
-				B03E8B66254437B600209B23 /* Kingfisher */,
+				B03E8B882544572400209B23 /* SDWebImage */,
 			);
 			productName = Blogger;
 			productReference = B0A6DEEC254403AE000C6C04 /* Blogger.app */;
@@ -339,7 +339,7 @@
 			);
 			mainGroup = B0A6DEE3254403AE000C6C04;
 			packageReferences = (
-				B03E8B65254437B600209B23 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				B03E8B872544572400209B23 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = B0A6DEED254403AE000C6C04 /* Products */;
 			projectDirPath = "";
@@ -739,21 +739,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B03E8B65254437B600209B23 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		B03E8B872544572400209B23 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.15.6;
+				minimumVersion = 5.9.4;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B03E8B66254437B600209B23 /* Kingfisher */ = {
+		B03E8B882544572400209B23 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B03E8B65254437B600209B23 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
+			package = B03E8B872544572400209B23 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -11,7 +11,7 @@ class CustomDateFormatter {
     
     class func utcToLocal(date: String) -> Date? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
         let localDate = dateFormatter.date(from: date)
         return localDate

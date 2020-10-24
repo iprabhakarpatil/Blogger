@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Kingfisher
+import SDWebImage
 
 class ViewController: UIViewController {
     
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 290.0
         tableView.tableFooterView = UIView()
         tableView.register(BlogTableViewCell.nib, forCellReuseIdentifier: BlogTableViewCell.reuseIdentifier)
     }
@@ -53,9 +54,12 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: BlogTableViewCell.reuseIdentifier, for: indexPath) as! BlogTableViewCell
         let blog = blogListViewModel?.blogAt(index: indexPath.row)
         cell.authorNameLabel.text = blog?.blogAuthor?.name
-        cell.authorProfileImageView.kf.setImage(with: blog?.blogAuthor?.profileImage)
+        cell.authorProfileImageView.sd_setImage(with: blog?.blogAuthor?.profileImage)
         if let media = blog?.blogMedia?.mediaImage {
-            cell.imageView?.kf.setImage(with: media)
+            cell.blogMediaImageView?.sd_setImage(with: media, completed: nil)
+            //            cell.imageView?.sd_setImage(with: media, placeholderImage: nil, options: [.scaleDownLargeImages, .continueInBackground], completed: { (_, _, _, _) in
+            //            })
+            
         } else {
             cell.imageView?.isHidden = true
         }
@@ -65,7 +69,7 @@ extension ViewController: UITableViewDataSource {
         cell.blogCommentsCountLabel.text = blog?.blogComments
         cell.blogLikeCountLabel.text = blog?.likesOnBlog
         cell.blogPostedTimeLabel.text = blog?.blogCreationDate
-        
+        cell.blogLinkLable.text = blog?.blogMedia?.mediaLink?.absoluteString
         return cell
     }
     
@@ -78,11 +82,10 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+        return 290.0
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
         if scrollView == tableView {
             if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
                 if blogListViewModel.hasMoreData {
@@ -91,4 +94,14 @@ extension ViewController: UITableViewDelegate {
             }
         }
     }
+    
+    //    func scrollview(_ scrollView: UIScrollView) {
+    //        if scrollView == tableView {
+    //            if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
+    //                if blogListViewModel.hasMoreData {
+    //                    blogListViewModel.fetchBlogs()
+    //                }
+    //            }
+    //        }
+    //    }
 }

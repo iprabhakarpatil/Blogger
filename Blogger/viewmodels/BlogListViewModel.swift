@@ -20,7 +20,7 @@ class BlogListViewModel {
         fetchBlogs()
     }
     
-    func fetchBlogs() {
+    func fetchBlogs(onCompletion: (() -> ())? = nil) {
         
         if hasMoreData {
             page = (blogList.count/10) + 1

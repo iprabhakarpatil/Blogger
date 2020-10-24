@@ -19,6 +19,8 @@ class BlogTableViewCell: UITableViewCell {
     @IBOutlet weak var blogLinkLable: UILabel!
     @IBOutlet weak var blogCommentsCountLabel: UILabel!
     @IBOutlet weak var blogLikeCountLabel: UILabel!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    
     
     static var reuseIdentifier: String {
         return String(describing: self)
@@ -26,6 +28,11 @@ class BlogTableViewCell: UITableViewCell {
     
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
+    }
+    
+    override func prepareForReuse() {
+        imageView?.image = nil
+        imageView?.isHidden = false
     }
     
     override func awakeFromNib() {
