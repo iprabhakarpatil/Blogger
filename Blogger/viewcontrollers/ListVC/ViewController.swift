@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 290.0
         tableView.tableFooterView = UIView()
         tableView.register(BlogTableViewCell.nib, forCellReuseIdentifier: BlogTableViewCell.reuseIdentifier)
     }
@@ -55,21 +54,21 @@ extension ViewController: UITableViewDataSource {
         let blog = blogListViewModel?.blogAt(index: indexPath.row)
         cell.authorNameLabel.text = blog?.blogAuthor?.name
         cell.authorProfileImageView.sd_setImage(with: blog?.blogAuthor?.profileImage)
-        if let media = blog?.blogMedia?.mediaImage {
-            cell.blogMediaImageView?.sd_setImage(with: media, completed: nil)
-            //            cell.imageView?.sd_setImage(with: media, placeholderImage: nil, options: [.scaleDownLargeImages, .continueInBackground], completed: { (_, _, _, _) in
-            //            })
-            
+        if let media = blog?.blogMedia {
+            cell.blogMediaImageView?.sd_setImage(with: media.mediaImage, completed: nil)
+            cell.blogTitleLabe.text = media.mediaTitle
+            cell.blogLinkLable.text = media.mediaLink?.absoluteString
         } else {
-            cell.imageView?.isHidden = true
+            cell.blogMediaImageView.isHidden = true
+            cell.blogLinkLable.isHidden = true
+            cell.blogTitleLabe.isHidden = true
         }
         cell.authorDesignationLabel.text = blog?.blogAuthor?.designation
-        cell.blogTitleLabe.text = blog?.blogMedia?.mediaTitle
         cell.blogContentLabel.text = blog?.blogContent
         cell.blogCommentsCountLabel.text = blog?.blogComments
         cell.blogLikeCountLabel.text = blog?.likesOnBlog
         cell.blogPostedTimeLabel.text = blog?.blogCreationDate
-        cell.blogLinkLable.text = blog?.blogMedia?.mediaLink?.absoluteString
+        cell.layoutIfNeeded()
         return cell
     }
     
@@ -80,11 +79,7 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 290.0
-    }
-    
+
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if scrollView == tableView {
             if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
@@ -94,14 +89,4 @@ extension ViewController: UITableViewDelegate {
             }
         }
     }
-    
-    //    func scrollview(_ scrollView: UIScrollView) {
-    //        if scrollView == tableView {
-    //            if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
-    //                if blogListViewModel.hasMoreData {
-    //                    blogListViewModel.fetchBlogs()
-    //                }
-    //            }
-    //        }
-    //    }
 }

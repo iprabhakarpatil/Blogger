@@ -31,8 +31,10 @@ class BlogTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-        imageView?.image = nil
-        imageView?.isHidden = false
+        blogMediaImageView?.image = nil
+        blogMediaImageView?.isHidden = false
+        blogTitleLabe.isHidden = false
+        blogLinkLable.isHidden = false
     }
     
     override func awakeFromNib() {
